@@ -1,4 +1,4 @@
-@Library('jenkinsfile-pipeline-library') _
+@Library('jenkinsfile-pipeline-library@issue_1') _
 
 def buildArtifact = new BuildStage()
 def deployQa = new DeployStage('qa')
