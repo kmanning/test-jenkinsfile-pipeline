@@ -1,7 +1,5 @@
 @Library('jenkinsfile-pipeline-library') _
 
-Jenkinsfile.init(this)
-
 def buildArtifact = new BuildStage()
 def deployQa = new DeployStage('qa')
 def deployUat = new DeployStage('uat')
