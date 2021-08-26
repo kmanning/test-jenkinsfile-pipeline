@@ -1,4 +1,4 @@
-@Library('jenkinsfile-pipeline@v1.1') _
+@Library('jenkinsfile-pipeline@issue_71') _
 
 Jenkinsfile.init(this)
 
