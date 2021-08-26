@@ -1,11 +1,15 @@
-@Library('jenkinsfile-pipeline-library@issue_1') _
+@Library('jenkinsfile-pipeline@v1.1') _
 
+Jenkinsfile.init(this)
+
+def pipeline = new ScriptedPipeline()
 def buildArtifact = new BuildStage()
 def deployQa = new DeployStage('qa')
 def deployUat = new DeployStage('uat')
 def deployProd = new DeployStage('prod')
 
-buildArtifact.then(deployQa)
-             .then(deployUat)
-             .then(deployProd)
-             .build()
+pipeline.startsWith(buildArtifact)
+        .then(deployQa)
+        .then(deployUat)
+        .then(deployProd)
+        .build()
